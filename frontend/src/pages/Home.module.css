@@ -1,0 +1,332 @@
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+  transition: background 0.8s ease;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 20px;
+  min-height: 460px;
+}
+
+.heroText {
+  flex: 1;
+  max-width: 540px;
+  animation: slideUp 0.6s ease;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1.5px solid;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.heroTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.heroSubtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 28px;
+}
+
+.heroBtns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.heroBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.heroBtn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+
+.heroBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+
+.heroBtnOutline:hover { background: rgba(255,255,255,0.1); }
+
+.heroImage {
+  flex: 1;
+  max-width: 440px;
+  animation: scaleIn 0.6s ease;
+}
+
+.heroImage img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.slideIndicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dotActive {
+  background: white;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Perks */
+.perksBar {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-light);
+}
+
+.perksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 20px;
+}
+
+.perk {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.perkIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.perkTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.perkDesc {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Sections */
+.section { padding: 36px 0; }
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+
+.viewAll:hover { gap: 10px; }
+
+/* Categories */
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.catCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.catCard:hover { transform: translateY(-4px); }
+
+.catImageWrap {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.catCard:hover .catImageWrap {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.catImageWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.catCard:hover .catImageWrap img { transform: scale(1.1); }
+
+.catName {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.catCard:hover .catName { color: var(--primary); }
+
+/* Promo Banner */
+.promoBanner {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  overflow: hidden;
+  margin: 8px 20px;
+}
+
+.promoContent {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.promoBadge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.promoTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.promoText {
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 24px;
+}
+
+.promoDecor {
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  pointer-events: none;
+}
+
+.promoCircle1 {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+.promoCircle2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  position: absolute;
+  bottom: -80px;
+  right: 80px;
+}
+
+@media (max-width: 1024px) {
+  .categoriesGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .heroContent { flex-direction: column; padding: 32px 16px; min-height: auto; }
+  .heroImage { display: none; }
+  .categoriesGrid { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .perksGrid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .promoBanner { padding: 32px 24px; margin: 8px 16px; }
+  .promoTitle { font-size: 24px; }
+  .promoDecor { display: none; }
+}
+
+@media (max-width: 480px) {
+  .categoriesGrid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .catName { font-size: 11px; }
+  .perksGrid { grid-template-columns: repeat(2, 1fr); }
+}

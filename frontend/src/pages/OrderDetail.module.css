@@ -1,0 +1,95 @@
+.page { padding: 24px 0 60px; }
+
+.header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 24px; flex-wrap: wrap; gap: 12px;
+}
+.back { font-size: 13px; color: var(--text-muted); text-decoration: none; display: block; margin-bottom: 6px; }
+.back:hover { color: var(--primary); }
+.header h1 { font-size: 24px; font-weight: 900; }
+.date { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+.headerRight { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+/* Tracking */
+.trackingCard {
+  background: var(--bg-card); border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light); padding: 24px; margin-bottom: 24px;
+}
+.trackingCard h3 { font-size: 16px; font-weight: 800; margin-bottom: 24px; display: flex; align-items: center; gap: 8px; }
+
+.trackingSteps {
+  display: flex; align-items: flex-start;
+  gap: 0; overflow-x: auto; padding-bottom: 8px;
+}
+.trackStep {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 8px; flex: 1; min-width: 90px; position: relative;
+}
+.trackDot {
+  width: 36px; height: 36px; border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background: var(--bg-card); color: var(--text-muted);
+  font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2; flex-shrink: 0; transition: var(--transition);
+}
+.done .trackDot { background: var(--success); border-color: var(--success); color: white; }
+.active .trackDot { background: var(--primary); border-color: var(--primary); color: white; box-shadow: 0 0 0 4px var(--primary-light); }
+
+.trackLabel {
+  font-size: 11px; font-weight: 600; text-align: center;
+  color: var(--text-muted); text-transform: capitalize;
+}
+.done .trackLabel { color: var(--success); }
+.active .trackLabel { color: var(--primary); }
+
+.trackLine {
+  position: absolute; top: 18px; left: 50%; width: 100%;
+  height: 2px; background: var(--border-color); z-index: 1;
+}
+.trackLineDone { background: var(--success); }
+
+/* Track History */
+.trackHistory { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-light); display: flex; flex-direction: column; gap: 12px; }
+.trackEvent { display: flex; gap: 12px; align-items: flex-start; }
+.trackEventDot { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); flex-shrink: 0; margin-top: 5px; }
+.trackEventMsg { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.trackEventTime { font-size: 12px; color: var(--text-muted); }
+
+/* Layout */
+.layout { display: grid; grid-template-columns: 1fr 320px; gap: 20px; align-items: flex-start; }
+.mainCol { display: flex; flex-direction: column; gap: 16px; }
+.sideCol { display: flex; flex-direction: column; gap: 16px; }
+
+/* Card */
+.card { background: var(--bg-card); border-radius: var(--radius-xl); border: 1px solid var(--border-light); padding: 20px; }
+.card h3 { font-size: 16px; font-weight: 800; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+
+/* Items */
+.itemsList { display: flex; flex-direction: column; gap: 14px; }
+.item { display: flex; gap: 14px; align-items: center; }
+.item img { width: 64px; height: 64px; border-radius: var(--radius-md); object-fit: cover; border: 1px solid var(--border-light); flex-shrink: 0; }
+.itemInfo { flex: 1; min-width: 0; }
+.itemName { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+.itemVariant { font-size: 12px; color: var(--text-muted); display: block; }
+.itemQty { font-size: 12px; color: var(--text-muted); }
+.itemPrice { font-size: 15px; font-weight: 800; color: var(--text-primary); flex-shrink: 0; }
+
+/* Address */
+.addressInfo { display: flex; flex-direction: column; gap: 4px; }
+.addressInfo p { font-size: 14px; color: var(--text-secondary); }
+
+/* Payment */
+.payInfo { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.payRow { display: flex; justify-content: space-between; font-size: 14px; }
+.payRow span { color: var(--text-muted); }
+.paid { color: var(--success) !important; }
+.pending { color: var(--warning) !important; }
+
+.pricingRows { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--border-light); padding-top: 12px; }
+.pricingRow { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-secondary); }
+.totalRow { font-size: 16px; color: var(--text-primary); padding-top: 8px; border-top: 2px solid var(--border-light); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}

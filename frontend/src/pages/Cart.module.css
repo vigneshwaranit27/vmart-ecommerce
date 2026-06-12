@@ -1,0 +1,179 @@
+.page { padding: 24px 0 48px; }
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 24px;
+}
+.header h1 { font-size: 26px; font-weight: 900; }
+.header h1 span { font-size: 18px; color: var(--text-muted); font-weight: 500; }
+
+.clearBtn {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600; color: var(--error);
+  background: var(--error-bg); border: none; padding: 8px 14px;
+  border-radius: var(--radius-md); cursor: pointer;
+  transition: var(--transition); font-family: inherit;
+}
+.clearBtn:hover { background: var(--error); color: white; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* Cart Items */
+.itemsList { display: flex; flex-direction: column; gap: 14px; }
+
+.cartItem {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  padding: 16px;
+  transition: var(--transition);
+}
+.cartItem:hover { box-shadow: var(--shadow-sm); }
+
+.itemImage {
+  width: 100px; height: 100px; flex-shrink: 0;
+  border-radius: var(--radius-md); overflow: hidden;
+  background: var(--bg-secondary); border: 1px solid var(--border-light);
+  display: block;
+}
+.itemImage img { width: 100%; height: 100%; object-fit: cover; }
+
+.itemInfo { flex: 1; min-width: 0; }
+.itemBrand { font-size: 11px; font-weight: 700; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.itemName {
+  font-size: 15px; font-weight: 600; color: var(--text-primary);
+  text-decoration: none; display: block; margin-bottom: 8px;
+  overflow: hidden; display: -webkit-box;
+  -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.itemName:hover { color: var(--primary); }
+
+.itemVariants { display: flex; gap: 12px; margin-bottom: 8px; }
+.itemVariants span {
+  font-size: 12px; color: var(--text-muted);
+  background: var(--bg-tertiary); padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.itemPriceRow { display: flex; align-items: center; gap: 10px; }
+.itemPrice { font-size: 17px; font-weight: 800; color: var(--text-primary); }
+.itemOriginalPrice { font-size: 13px; color: var(--text-muted); text-decoration: line-through; }
+.lowStock { font-size: 12px; font-weight: 600; color: var(--warning); margin-top: 4px; display: block; }
+
+.itemActions {
+  display: flex; flex-direction: column;
+  align-items: flex-end; gap: 12px; flex-shrink: 0;
+}
+
+.qtyControl {
+  display: flex; align-items: center;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md); overflow: hidden;
+}
+.qtyBtn {
+  width: 34px; height: 34px;
+  background: var(--bg-tertiary); border: none;
+  color: var(--text-secondary); font-size: 14px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.qtyBtn:hover:not(:disabled) { background: var(--primary); color: white; }
+.qtyBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+.qtyVal {
+  min-width: 40px; text-align: center;
+  font-size: 15px; font-weight: 700;
+  color: var(--text-primary); padding: 0 6px;
+  border-left: 2px solid var(--border-color);
+  border-right: 2px solid var(--border-color);
+  height: 34px; display: flex; align-items: center; justify-content: center;
+}
+
+.itemTotal { font-size: 16px; font-weight: 800; color: var(--primary); }
+
+.removeBtn {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: none; border: 1px solid var(--border-color);
+  color: var(--text-muted); font-size: 15px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.removeBtn:hover { background: var(--error-bg); border-color: var(--error); color: var(--error); }
+
+/* Summary */
+.summary { position: sticky; top: calc(var(--header-height) + 16px); }
+
+.summaryCard {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  padding: 24px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.summaryCard h3 { font-size: 18px; font-weight: 800; }
+
+.shippingProgress { }
+.shippingProgress p { font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; }
+.progressBar { height: 6px; background: var(--border-color); border-radius: 3px; overflow: hidden; }
+.progressFill { height: 100%; background: linear-gradient(90deg, var(--primary), var(--secondary)); border-radius: 3px; transition: width 0.4s ease; }
+
+.freeShippingMsg {
+  font-size: 13px; font-weight: 600; color: var(--success);
+  background: var(--success-bg); padding: 10px 14px;
+  border-radius: var(--radius-md); text-align: center;
+}
+
+.summaryRows { display: flex; flex-direction: column; gap: 10px; }
+.summaryRow {
+  display: flex; justify-content: space-between;
+  font-size: 14px; color: var(--text-secondary);
+}
+.free { color: var(--success); font-weight: 700; }
+.totalRow {
+  font-size: 17px; color: var(--text-primary);
+  padding-top: 12px; margin-top: 4px;
+  border-top: 2px solid var(--border-light);
+}
+
+/* Coupon */
+.couponInput {
+  display: flex; align-items: center;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md); overflow: hidden;
+  padding: 6px 6px 6px 12px; gap: 8px;
+}
+.couponIcon { color: var(--text-muted); font-size: 15px; flex-shrink: 0; }
+.couponField {
+  flex: 1; border: none; background: none;
+  color: var(--text-primary); font-size: 14px;
+  font-family: inherit;
+}
+.couponField::placeholder { color: var(--text-muted); }
+
+.continueShopping {
+  display: block; text-align: center;
+  font-size: 13px; font-weight: 600;
+  color: var(--text-muted); text-decoration: none;
+  transition: color 0.2s;
+}
+.continueShopping:hover { color: var(--primary); }
+
+.securityNote {
+  text-align: center; font-size: 12px;
+  color: var(--text-muted); margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .summary { position: static; }
+}
+@media (max-width: 600px) {
+  .cartItem { flex-direction: column; }
+  .itemImage { width: 100%; height: 180px; }
+  .itemActions { flex-direction: row; align-items: center; width: 100%; justify-content: space-between; }
+}

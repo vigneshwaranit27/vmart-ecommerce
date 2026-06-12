@@ -1,0 +1,88 @@
+.authPage {
+  min-height: calc(100vh - var(--header-height));
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 20px;
+  background: var(--bg-secondary);
+}
+
+.authCard {
+  width: 100%; max-width: 440px;
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+  padding: 36px;
+  animation: scaleIn 0.3s ease;
+}
+
+.authHeader { text-align: center; margin-bottom: 28px; }
+.authLogo {
+  display: inline-flex; align-items: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 800;
+  color: var(--text-primary); text-decoration: none;
+  margin-bottom: 16px;
+}
+.logoV { color: var(--primary); }
+.authHeader h1 { font-size: 24px; font-weight: 800; color: var(--text-primary); margin-bottom: 6px; }
+.authHeader p { font-size: 14px; color: var(--text-muted); }
+
+.authForm { display: flex; flex-direction: column; gap: 0; }
+
+/* Input with icon */
+.inputWrap { position: relative; display: flex; align-items: center; }
+.inputIcon {
+  position: absolute; left: 14px;
+  color: var(--text-muted); font-size: 15px; pointer-events: none;
+}
+.inputWithIcon { padding-left: 40px !important; }
+.showPass {
+  position: absolute; right: 12px;
+  background: none; border: none; color: var(--text-muted);
+  cursor: pointer; display: flex; align-items: center;
+  font-size: 16px; transition: color 0.2s;
+}
+.showPass:hover { color: var(--text-primary); }
+
+.forgotRow {
+  display: flex; justify-content: flex-end;
+  margin-top: -8px; margin-bottom: 16px;
+}
+.forgotRow a { font-size: 13px; color: var(--primary); text-decoration: none; font-weight: 600; }
+.forgotRow a:hover { text-decoration: underline; }
+
+.errorAlert {
+  background: var(--error-bg); color: var(--error);
+  padding: 12px 14px; border-radius: var(--radius-md);
+  font-size: 13px; font-weight: 600; margin-bottom: 16px;
+  border: 1px solid rgba(244, 67, 54, 0.2);
+}
+
+.successAlert {
+  background: var(--success-bg); color: var(--success);
+  padding: 12px 14px; border-radius: var(--radius-md);
+  font-size: 13px; font-weight: 600; margin-bottom: 16px;
+  border: 1px solid rgba(0, 200, 83, 0.2);
+}
+
+/* Demo Box */
+.demoBox {
+  background: var(--bg-tertiary); border-radius: var(--radius-md);
+  padding: 12px; margin-top: 16px; text-align: center;
+}
+.demoBox p { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 8px; }
+.demoBox button {
+  margin: 0 4px; padding: 5px 12px;
+  font-size: 12px; font-weight: 600;
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-md); color: var(--primary);
+  cursor: pointer; transition: var(--transition); font-family: inherit;
+}
+.demoBox button:hover { background: var(--primary); color: white; }
+
+.switchAuth {
+  text-align: center; font-size: 14px; color: var(--text-muted);
+  margin-top: 20px;
+}
+.switchAuth a { color: var(--primary); font-weight: 700; text-decoration: none; }
+.switchAuth a:hover { text-decoration: underline; }

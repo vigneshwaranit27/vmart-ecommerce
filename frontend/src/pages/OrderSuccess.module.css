@@ -1,0 +1,33 @@
+.page {
+  min-height: calc(100vh - var(--header-height));
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 20px; background: var(--bg-secondary);
+}
+.card {
+  max-width: 500px; width: 100%;
+  background: var(--bg-card); border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light); box-shadow: var(--shadow-lg);
+  padding: 48px 36px; text-align: center;
+  animation: scaleIn 0.4s ease;
+}
+.iconWrap {
+  width: 90px; height: 90px; border-radius: 50%;
+  background: var(--success-bg); display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+}
+.icon { font-size: 48px; color: var(--success); }
+.card h1 { font-size: 28px; font-weight: 900; margin-bottom: 8px; }
+.subtitle { font-size: 16px; color: var(--text-muted); margin-bottom: 28px; }
+
+.orderInfo {
+  background: var(--bg-secondary); border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light); padding: 16px;
+  display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;
+}
+.orderInfoItem { display: flex; justify-content: space-between; font-size: 14px; }
+.orderInfoItem span { color: var(--text-muted); }
+.orderInfoItem strong { color: var(--text-primary); }
+.payStatus { text-transform: uppercase; color: var(--primary) !important; }
+
+.emailNote { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; }
+.actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }

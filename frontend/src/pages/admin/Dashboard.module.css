@@ -1,0 +1,155 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+
+.header h1 { font-size: 28px; font-weight: 900; color: var(--text-primary); margin-bottom: 4px; }
+.header p { font-size: 14px; color: var(--text-muted); }
+
+/* Stats Grid */
+.statsGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+.statCard {
+  background: var(--bg-card); border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light); padding: 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: var(--transition);
+}
+.statCard:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+.statLabel { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 8px; }
+.statValue { font-size: 26px; font-weight: 900; color: var(--text-primary); margin-bottom: 6px; }
+.statTrend { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; }
+
+.statIcon {
+  width: 52px; height: 52px; border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; flex-shrink: 0;
+}
+
+/* Main Grid */
+.mainGrid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+
+/* Chart Card */
+.chartCard {
+  background: var(--bg-card); border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light); padding: 20px;
+}
+
+.cardHeader {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;
+}
+.cardHeader h3 { font-size: 16px; font-weight: 800; }
+.viewAll {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 12px; font-weight: 600; color: var(--primary);
+  text-decoration: none; transition: gap 0.2s;
+}
+.viewAll:hover { gap: 8px; }
+
+/* Bar Chart */
+.barChart {
+  display: flex; align-items: flex-end; gap: 12px;
+  height: 200px; padding-bottom: 8px;
+}
+.barGroup {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.barWrap { flex: 1; width: 100%; display: flex; align-items: flex-end; }
+.bar {
+  width: 100%; min-height: 4px;
+  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+  border-radius: 4px 4px 0 0;
+  transition: height 0.6s ease;
+  cursor: pointer;
+}
+.bar:hover { background: linear-gradient(180deg, var(--secondary), var(--secondary-dark)); }
+.barLabel { font-size: 10px; color: var(--text-muted); font-weight: 600; text-align: center; }
+.barValue { font-size: 9px; color: var(--text-muted); }
+
+/* Status Card */
+.statusCard {
+  background: var(--bg-card); border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light); padding: 20px;
+}
+.statusList { display: flex; flex-direction: column; gap: 10px; }
+.statusRow {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 10px; border-radius: var(--radius-md);
+  transition: background 0.15s;
+}
+.statusRow:hover { background: var(--bg-tertiary); }
+.statusDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.statusName { flex: 1; font-size: 13px; font-weight: 600; color: var(--text-secondary); text-transform: capitalize; }
+.statusCount {
+  font-size: 13px; font-weight: 800; color: var(--text-primary);
+  background: var(--bg-tertiary); padding: 2px 8px; border-radius: var(--radius-full);
+}
+
+/* Bottom Grid */
+.bottomGrid { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+
+/* Table Card */
+.tableCard {
+  background: var(--bg-card); border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light); padding: 20px; overflow: hidden;
+}
+.tableWrapper { overflow-x: auto; margin-top: 4px; }
+
+.table { width: 100%; border-collapse: collapse; }
+.table thead tr { border-bottom: 2px solid var(--border-light); }
+.table th {
+  padding: 10px 12px; text-align: left;
+  font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 0.5px; color: var(--text-muted);
+}
+.table td { padding: 12px; border-bottom: 1px solid var(--border-light); font-size: 13px; color: var(--text-secondary); }
+.table tr:last-child td { border-bottom: none; }
+.table tr:hover td { background: var(--bg-secondary); }
+
+.orderLink { color: var(--primary); font-weight: 700; text-decoration: none; }
+.orderLink:hover { text-decoration: underline; }
+
+.customerCell { display: flex; align-items: center; gap: 10px; }
+.customerAvatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 800; color: white; flex-shrink: 0;
+}
+.customerCell p { font-size: 13px; font-weight: 600; color: var(--text-primary); }
+.customerCell span { font-size: 11px; color: var(--text-muted); }
+
+.statusBadge {
+  display: inline-block; padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 11px; font-weight: 700;
+  text-transform: capitalize;
+}
+
+/* Top Products */
+.topProductsCard {
+  background: var(--bg-card); border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light); padding: 20px;
+}
+.topProductsList { display: flex; flex-direction: column; gap: 12px; }
+.topProduct {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px; border-radius: var(--radius-md); transition: background 0.15s;
+}
+.topProduct:hover { background: var(--bg-tertiary); }
+.rank { font-size: 13px; font-weight: 900; color: var(--text-muted); width: 20px; flex-shrink: 0; }
+.productThumb {
+  width: 44px; height: 44px; border-radius: var(--radius-md);
+  object-fit: cover; border: 1px solid var(--border-light); flex-shrink: 0;
+}
+.productInfo { flex: 1; min-width: 0; }
+.productName { font-size: 13px; font-weight: 600; color: var(--text-primary); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.productSold { font-size: 11px; color: var(--text-muted); }
+.productPrice { font-size: 13px; font-weight: 800; color: var(--primary); flex-shrink: 0; }
+
+@media (max-width: 1200px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .mainGrid { grid-template-columns: 1fr; }
+  .bottomGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+}
