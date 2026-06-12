@@ -1,3 +1,4 @@
+
 # 🛍️ VMart — Full-Stack MERN E-Commerce Platform
 
 > **Shop Smart, Live Better** — A production-ready e-commerce application built with the MERN stack (MongoDB, Express, React, Node.js) and powered by Vite.
@@ -267,3 +268,6 @@ MIT © VMart 2024
 ---
 
 > Built with ❤️ using the MERN Stack
+
+# vmart-ecommerce
+
