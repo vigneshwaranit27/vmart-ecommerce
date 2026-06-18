@@ -3,21 +3,21 @@ import api from '../../services/api';
 
 export const fetchProducts = createAsyncThunk('products/fetchAll', async (params, { rejectWithValue }) => {
   try {
-    const res = await api.get('/products', { params });
+    const res = await api.get('/api/products', { params });
     return res.data;
   } catch (err) { return rejectWithValue(err.response?.data?.message); }
 });
 
 export const fetchProduct = createAsyncThunk('products/fetchOne', async (id, { rejectWithValue }) => {
   try {
-    const res = await api.get(`/products/${id}`);
+    const res = await api.get(`/api/products/${id}`);
     return res.data.product;
   } catch (err) { return rejectWithValue(err.response?.data?.message); }
 });
 
 export const fetchCategories = createAsyncThunk('products/fetchCategories', async (_, { rejectWithValue }) => {
   try {
-    const res = await api.get('/categories');
+    const res = await api.get('/api/categories');
     return res.data.categories;
   } catch (err) { return rejectWithValue(err.response?.data?.message); }
 });
